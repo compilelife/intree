@@ -4,7 +4,7 @@ import java.util.*
 
 class Node<T>(val name: String){
     var parent : Node<T>? = null
-    var data : T? = null
+    @Volatile var data : T? = null
     private val children = HashMap<String, Node<T>>()
 
     fun getChildren() = children.values.toList()
